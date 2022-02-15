@@ -7,7 +7,6 @@ import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { FilmeService } from '../services/filme.service';
 import { GeneroService } from '../services/genero.service';
-import { IGenero } from '../models/IGenero.model';
 
 @Component({
   selector: 'app-tab1',
@@ -84,7 +83,7 @@ export class Tab1Page implements OnInit {
           cssClass: 'secondary',
           id: 'cancel-button',
           handler: (blah) => {
-            console.log('Confirm Cancel: blah');
+              //fazer algo
           }
         }, {
           text: 'Sim',
@@ -110,7 +109,6 @@ export class Tab1Page implements OnInit {
 
   ngOnInit(): void {
       this.generoService.buscarGeneros().subscribe(dados => {
-        console.log('Generos: ', dados.genres);
         dados.genres.forEach(genero => {
           this.generos[genero.id] = genero.name;
         });

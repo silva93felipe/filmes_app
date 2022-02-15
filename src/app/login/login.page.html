@@ -1,11 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true"> 
+  <div class="center">
+    <ion-card color="dark">
+      <img src="assets/logo.png" alt="Logo">
+      <ion-card-title class="ion-text-center">Vídeos App</ion-card-title>
+      <ion-item lines="none" color="dark">
+        <ion-label position="floating" >E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
 
-<ion-content>
+      <ion-item lines="none" color="dark">
+        <ion-label position="floating" >Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="senha"></ion-input>
+      </ion-item>
 
+      <ion-button expand="full" fill="outline" color="light" (click)="login()">Entrar</ion-button>
+      <ion-button expand="full" fill="clear" color="light">Registrar</ion-button>
+    </ion-card>
+  </div>
 </ion-content>
 
 <!-- aula 32 -->
